@@ -1,5 +1,6 @@
 export const testData = {
 
+    //test login page
     validUser: {
         username: 'standard_user',
         password: 'secret_sauce'
@@ -21,5 +22,22 @@ export const testData = {
 
         missingUsername:
             'Epic sadface: Username is required'
+    },
+
+    //Smoke test data for checkout process
+    user: {
+        username: 'standard_user',
+        password: 'secret_sauce'
+    },
+
+    checkout: {
+        firstName: 'Gayan',
+        lastName: 'Jayawardhana',
+        postalCode: '10100'
+    },
+
+    product: {
+        name: 'Sauce Labs Backpack'
     }
+
 };
