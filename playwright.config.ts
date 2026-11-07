@@ -15,12 +15,16 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 1 : 0,
   workers: process.env.CI ? 1 : 1,
-  reporter: 'html',
+  //reporter: 'html',
+  reporter: [
+        ['list'],
+        ['html', { open: 'never' }]
+    ],
   use: {
     baseURL: 'https://www.saucedemo.com',
-    headless: false,
+    headless: !!process.env.CI,
 
     //Evidance
     screenshot: 'only-on-failure',
